@@ -26,10 +26,16 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ImportScreen(onBackClick: () -> Unit) {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(color = Color.White)
+        )
         Headboard("Import", onBackClick = onBackClick)
         Box(
             Modifier
-                .fillMaxSize(),
+                .fillMaxSize()
+                .background(color = Color.White),
             Alignment.Center
         ) {
             Box(
