@@ -8,6 +8,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.example.systrackerrel.ui.theme.MapScreen
+import com.example.systrackerrel.ui.theme.ProfilesScreen
+import com.example.systrackerrel.ui.theme.SettingsScreen
 import com.example.systrackerrel.ui.theme.SysTrackerRelTheme
 
 enum class Navigation {
