@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -51,12 +52,13 @@ fun MainScreen(
         ) {
             Box(
                 modifier = Modifier
-                    .fillMaxWidth(0.7f)
-                    .fillMaxHeight(0.7f)
-                    .border(5.dp, Color.Black)
+                    .fillMaxWidth(0.8f)
+                    .fillMaxHeight(0.8f)
+                    .border(5.dp, Color.Black, RoundedCornerShape(12.dp))
                     .shadow(12.dp)
-                    .background(Color.LightGray)
-                    .padding(15.dp),
+                    .background(Color.LightGray, RoundedCornerShape(12.dp))
+                    .padding(15.dp)
+                    .clip(RoundedCornerShape(200.dp)),
                 Alignment.Center
             ) {
                 Column(
@@ -135,6 +137,7 @@ fun Headboard(pageName: String, modifier: Modifier = Modifier, onBackClick: () -
                 .size(25.dp)
                 .clip(CircleShape)
                 .clickable(onClick = onBackClick)
+                .background(Color.White)
         )
         Box(
             Modifier

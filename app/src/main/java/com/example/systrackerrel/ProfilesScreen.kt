@@ -20,8 +20,7 @@ fun ProfilesScreen(onBackClick: () -> Unit) {
         Headboard("Profiles", onBackClick = onBackClick)
         Box(
             Modifier
-                .fillMaxSize()
-                .background(color = Color.White),
+                .fillMaxSize(),
             Alignment.Center
         ) {}
     }

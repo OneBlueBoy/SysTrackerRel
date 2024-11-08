@@ -20,8 +20,7 @@ fun MapScreen(onBackClick: () -> Unit) {
         Headboard("Map", onBackClick = onBackClick)
         Box(
             Modifier
-                .fillMaxSize()
-                .background(color = Color.White),
+                .fillMaxSize(),
             Alignment.Center
         ) {}
     }

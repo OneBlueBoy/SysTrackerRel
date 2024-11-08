@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,17 +35,16 @@ fun ImportScreen(onBackClick: () -> Unit) {
         Headboard("Import", onBackClick = onBackClick)
         Box(
             Modifier
-                .fillMaxSize()
-                .background(color = Color.White),
+                .fillMaxSize(),
             Alignment.Center
         ) {
             Box(
                 modifier = Modifier
-                    .fillMaxWidth(0.7f)
-                    .fillMaxHeight(0.7f)
-                    .border(5.dp, Color.Black)
+                    .fillMaxWidth(0.8f)
+                    .fillMaxHeight(0.8f)
+                    .border(5.dp, Color.Black, RoundedCornerShape(12.dp))
                     .shadow(12.dp)
-                    .background(Color.LightGray)
+                    .background(Color.LightGray, RoundedCornerShape(12.dp))
                     .padding(15.dp),
                 Alignment.Center
             ) {
