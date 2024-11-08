@@ -38,6 +38,11 @@ fun MainScreen(
     onSettingsClick: () -> Unit
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(color = Color.White)
+        )
         Headboard("Tracker", onBackClick = onBackClick)
         Box(
             Modifier
