@@ -2,7 +2,6 @@ package com.example.systrackerrel
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,14 +18,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 @Composable
-fun ImportScreen(onBackClick: () -> Unit) {
+fun SettingsScreen(
+    onBackClick: () -> Unit
+) {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-        Headboard("Import", onBackClick = onBackClick)
+        Headboard("Settings", onBackClick = onBackClick)
         Box(
             Modifier
                 .fillMaxSize(),
@@ -46,14 +45,13 @@ fun ImportScreen(onBackClick: () -> Unit) {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-
                     Heading(
-                        title = "Chose whose data to import",
+                        title = "Edit your settings",
                         modifier = Modifier.padding(innerPadding)
-
                     )
-                    MessageLine("Your existing data will not be deleted, however changes will be applied")
-
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text("")
+                    Spacer(modifier = Modifier.height(8.dp))
                     Box(
                         Modifier
                             .fillMaxSize(0.9f),
@@ -63,12 +61,6 @@ fun ImportScreen(onBackClick: () -> Unit) {
                             verticalArrangement = Arrangement.Center,
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Slot("My Own", Modifier.clickable {})
-                            Spacer(modifier = Modifier.height(12.dp))
-                            Slot("My Partners", Modifier.clickable { })
-                            Spacer(modifier = Modifier.height(12.dp))
-                            Slot("A Friends", Modifier.clickable { })
-
                         }
                     }
                 }
@@ -76,21 +68,3 @@ fun ImportScreen(onBackClick: () -> Unit) {
         }
     }
 }
-
-@Composable
-fun Heading(title: String, modifier: Modifier = Modifier) {
-    Text(
-        text = title,
-        modifier = modifier,
-        style = TextStyle(fontSize = 25.sp)
-    )
-}
-
-@Composable
-fun MessageLine(message: String, modifier: Modifier = Modifier) {
-    Spacer(modifier = Modifier.height(4.dp))
-    Text(message)
-    Spacer(modifier = Modifier.height(8.dp))
-}
-
-
